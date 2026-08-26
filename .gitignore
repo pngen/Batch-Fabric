@@ -1,0 +1,63 @@
+# Build directories
+/build*/
+/out/
+/cmake-build-*/
+
+# MSVC / Visual Studio
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.VC.opendb
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.ipdb
+*.iobj
+*.exe
+*.dll
+*.lib
+*.exp
+
+# CMake artifacts
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+Makefile
+.ninja_deps
+.ninja_log
+
+# CUDA / nvcc artifacts
+*.fatbin
+*.ptx
+*.cubin
+
+# Compiled / generated
+*.o
+*.a
+*.so
+*.dylib
+*.gcda
+*.gcno
+*.gcov
+
+# Test / runtime output
+/test-artifacts/
+*.bfstate
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editors
+.idea/
+*.swp
+*~
+.DS_Store
+# Local build helper (machine-specific compiler paths)
+tools/msvc_env.cmd

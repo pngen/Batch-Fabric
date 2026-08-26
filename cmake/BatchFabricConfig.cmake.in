@@ -1,0 +1,14 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+if(NOT WIN32)
+  find_dependency(Threads)
+endif()
+
+# Batch Fabric's CUDA executor links CUDA::cudart; find it when it was enabled.
+find_dependency(CUDAToolkit)
+
+include("${CMAKE_CURRENT_LIST_DIR}/BatchFabricTargets.cmake")
+
+check_required_components(BatchFabric)
