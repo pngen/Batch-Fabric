@@ -245,20 +245,6 @@ alone), including submission, compatibility-key computation, batch-size scaling,
 queue-depth scaling, multithreaded formation, persistence serialization and
 recovery, and snapshot cost, reporting ops/s and total times.
 
-## Limitations
-
-- Batch Fabric forms one batch per compatibility key per formation cycle; a very
-  large same-key queue drains over multiple cycles rather than all at once. The
-  formation algorithm is deterministic and correct, but not the fastest possible
-  for a single hot compatibility key.
-- The distributed control plane currently targets a single host / loopback
-  transport; cross-host operation is future work.
-- Cross-phase (prefill+decode) batching is disabled by default and only
-  permitted when policy explicitly allows it and the executor contract proves
-  it valid.
-- The runtime does not execute or interpret tensor payloads; it carries opaque
-  metadata and hands execution to an external executor.
-
 ## License
 
-Apache License 2.0. See `LICENSE`. See `NOTICE` and `CONTRIBUTING.md`.
+Apache License 2.0. Copyright 2026 Summon Software Labs. No telemetry transmission.
