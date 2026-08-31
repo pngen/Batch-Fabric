@@ -207,8 +207,8 @@ Runnable examples build and run under `examples/`: `basic_batching`,
 `tests/` contains unit tests, lifecycle tests, seeded randomized property tests
 (6000+ invariant checks across multiple seeds), adversarial hardening tests, a
 real multiprocess atomic authority-transition proof, and a benchmark smoke test.
-No test uses a wall-clock timeout; timing behavior uses the simulated monotonic
-clock.
+Timing behavior uses the injectable simulated monotonic clock rather than
+wall-clock sleeps.
 
 ## CUDA proof
 
